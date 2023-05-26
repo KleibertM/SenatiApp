@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Joss"
+             x:Class="Joss.Alumnos"
+             Title="Registrar Alumno">
+    <StackLayout BackgroundColor="White">
+        <StackLayout>
+            <Frame  BackgroundColor="Black" Opacity=".6" Margin="10,10,10,0" BorderColor="LightBlue" CornerRadius="10">
+                <StackLayout >
+                    <Entry x:Name="txtidAlum" IsVisible="False"/>
+                    <Entry x:Name="txtNombre" Placeholder="Nombre" PlaceholderColor="White" TextColor="White" FontSize="18"/>
+                    <Entry x:Name="txtApellido" Placeholder="Apellido" PlaceholderColor="White" TextColor="White" FontSize="18"/>
+                    <Entry x:Name="txtEdad" Placeholder="Edad" PlaceholderColor="White" TextColor="White" FontSize="18" Keyboard="Numeric"/>
+                    <Entry x:Name="txtEmail" Placeholder="Email" PlaceholderColor="White"  TextColor="White" FontSize="18" Keyboard="Email"/>
+                    <Picker x:Name="txtCarre" Title="Selecciona una carrera">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Electricidad Industrial</x:String>
+                                <x:String>Mecánica Automotriz</x:String>
+                                <x:String>Electrónica Industrial</x:String>
+                                <x:String>Mecatrónica Industrial</x:String>
+                                <x:String>Programación de Software</x:String>
+                                <x:String>Gestión de Redes y Comunicaciones</x:String>
+                                <x:String>Administración Industrial</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Picker x:Name="sedePicker" Title="Selecciona una sede">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>ESCUELA TECH SENATI</x:String>
+                                <x:String>Independencia</x:String>
+                                <x:String>Huaura</x:String>
+                                <x:String>Cercado de Lima</x:String>
+                                <x:String>Huacho</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Button x:Name="btnRegistar" Text="Registrar" Clicked="btnRegistar_Clicked" Margin="10,0,10,0" 
+                            BackgroundColor="ForestGreen" TextColor="White" FontAttributes="Bold" CornerRadius="10"/>
+                    <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked"  IsVisible="False" 
+                            BackgroundColor="ForestGreen" TextColor="White" FontAttributes="Bold" CornerRadius="10" />
+                    <Button x:Name="Eliminar" Text="Eliminar" Clicked="Eliminar_Clicked" IsVisible="False" 
+                            BackgroundColor="Red" TextColor="White" FontAttributes="Bold" CornerRadius="10" />
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="listALumnos" ItemSelected="listALumnos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="Gray" Padding="5,0,5,0" >
+                                <Grid.RowDefinitions >
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding IdAlum}" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                <Label Text="{Binding Nom}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label Text="{Binding Apellido}" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label Text="{Binding Edad}" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label Text="{Binding Email}" Grid.Row="1" Grid.Column="1"
+                                       TextColor="LightBlue" VerticalOptions="Start" HorizontalOptions="Center" />
+                                <Label Text="{Binding Carrera}" Grid.Row="1" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label Text="{Binding Sede}" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

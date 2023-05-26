@@ -1,0 +1,48 @@
+﻿using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using System.IO;
+using Joss.Model;
+using SQLite;
+using System.Threading.Tasks;
+using Joss.Data;
+
+namespace Joss
+{
+    public partial class App : Application
+    {
+        public static MasterDetailPage MasterDet { get; set; }
+
+        static SQLiteHelper db;
+
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+        }
+        public static SQLiteHelper SQLiteDB
+        {
+            get
+            {
+                if (db == null)
+                {
+                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Escuela.db3"
+                        ));
+                }
+                return db;
+            }
+        }
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
+    }
+}

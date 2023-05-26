@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joss.Nav"
+             Title="Nav"
+              BackgroundColor="Gray" Opacity=".8">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="20,10,0,0" >
+                <StackLayout>
+                    <Label Text="Trabajo Final" FontSize="32" TextColor="RoyalBlue" TextTransform="Uppercase" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/512/6475/6475880.png" HeightRequest="40"
+                         BackgroundColor="Transparent" Clicked="btnIni_Clicked" />
+                    <Button Text="inicio" x:Name="btnIni" 
+                        BackgroundColor="Transparent" Clicked="btnIni_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/512/5850/5850276.png" HeightRequest="40"
+                         BackgroundColor="Transparent" Clicked="btnAlum_Clicked"/>
+                    <Button Text="Alumnos" x:Name="btnAlum" 
+                        BackgroundColor="Transparent" Clicked="btnAlum_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/512/4616/4616368.png" HeightRequest="40"
+                         BackgroundColor="Transparent" Clicked="btnSedes_Clicked" />
+                    <Button Text="Sedes" x:Name="btnSedes" 
+                        BackgroundColor="Transparent" Clicked="btnSedes_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/512/3038/3038144.png" HeightRequest="40"
+                         BackgroundColor="Transparent" />
+                    <Button Text="Ayuda" x:Name="btnAyu" 
+                        BackgroundColor="Transparent"  />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/512/4998/4998821.png" HeightRequest="40"  BackgroundColor="Transparent" Clicked="btnCerrar_Clicked" />
+                    <Button Text="Cerrar Seccion" x:Name="btnCerrar"  BackgroundColor="Transparent" Clicked="btnCerrar_Clicked"  />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Joss"
+             x:Class="Joss.Sedes"
+             Title="Sedes">
+    <ContentPage.Content>
+        <StackLayout Padding="20,10,20,5" BackgroundColor="White">
+            <Frame BackgroundColor="LightBlue">
+                <Label Text="Sedes en Lima" TextColor="Black" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            </Frame>
+            <ListView x:Name="IvClientes" BackgroundColor="White" HasUnevenRows="True" SeparatorColor="RoyalBlue" ItemSelected="IvClientes_ItemSelected">
+                <ListView.ItemTemplate BackgroundColor="red">
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="StartAndExpand" Padding="10">
+                                <Label Text="{Binding Nombre}" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
+                                <Label Text="{Binding Direccion}" TextColor="Black" FontSize="Small"/>
+                                <Label Text="{Binding Ciudad}" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Joss.Login"
+              NavigationPage.HasNavigationBar="False">
+    
+    <Grid Padding="20" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.ColumnSpan="2" Grid.Row="0" Text="Bienvenido" TextColor="RoyalBlue" 
+               FontSize="48" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <Image Grid.ColumnSpan="2" Grid.Row="2" 
+               Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Senati_Per%C3%BA_logo.svg/2560px-Senati_Per%C3%BA_logo.svg.png"  />
+
+        <Label Grid.Column="0" Grid.Row="3"  Text="Usuario: " 
+               FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
+        <Label Grid.Column="0" Grid.Row="4" Text="Clave: " 
+               FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"  TextColor="Black"/>
+
+        <Entry Grid.Column="1" Grid.Row="3" x:Name="usuario" 
+               Placeholder="admin" VerticalOptions="Center" PlaceholderColor="Gray" TextColor="Black" />
+        <Entry Grid.Column="1" Grid.Row="4" x:Name="clave" 
+               Placeholder="1234" IsPassword="True" VerticalOptions="Center" PlaceholderColor="Gray" TextColor="Black" />
+
+        <Button Grid.ColumnSpan="2" Grid.Row="6" x:Name="btnAcce" Text="Acceder" 
+                BackgroundColor="RoyalBlue" TextColor="White" FontSize="20" FontAttributes="Bold" CornerRadius="60" Clicked="btnAcce_Clicked"/>
+
+        <Label  Grid.ColumnSpan="2" Grid.Row="7" Text="CREADOR: KLEIBERT MEDINA" 
+                FontSize="12" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"   />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="Joss.Inicio"
+             Title="Inicio"
+             >
+    <Grid Padding="10" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".33*"/>
+            <ColumnDefinition Width=".33*"/>
+            <ColumnDefinition Width=".33*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.ColumnSpan="3" Grid.Row="0" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Senati_Per%C3%BA_logo.svg/2560px-Senati_Per%C3%BA_logo.svg.png"/>
+
+       <ScrollView Orientation="Horizontal" Grid.ColumnSpan="3" Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="190"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".33*"/>
+                    <ColumnDefinition Width=".33*"/>
+                    <ColumnDefinition Width=".33*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <Image Grid.Column="0" Grid.Row="0" Source="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/EJSXTAVBMFDFDLIB773LBJSSBM.png" />
+                
+
+                <Image Grid.Column="1" Grid.Row="0" Source="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/AGEGFDMQCZAO3MVR6NWGY3K7OI.png" />
+                
+
+                <Image Grid.Column="2" Grid.Row="0" Source="https://www.senati.edu.pe/sites/default/files/styles/especialidades_500x299/public/2017/especialidad/11/senati-escuela-superior-500x299.jpg?itok=kAKdpb-0" />
+                
+            </Grid>
+        </ScrollView>
+        <ScrollView Orientation="Vertical" Grid.ColumnSpan="3" Grid.Row="2" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="190" />
+                    <RowDefinition Height="190" />
+                    <RowDefinition Height="190" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <Image Grid.Column="0" Grid.Row="0" Source="https://elpopular.cronosmedia.glr.pe/original/2022/09/20/632a2297c2aa5839572b7847.jpg" />
+
+
+                <Image Grid.Column="0" Grid.Row="1" Source="https://elcomercio.pe/resizer/wRtSQNvgszXVZr7h76uAEXboGtM=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/FJSX7NXQS5GQ3J3MSKB7LXNKZA.jpg" />
+
+
+                <Image Grid.Column="0" Grid.Row="2" Source="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0nfXFksGA75B53fvG55zQUJQLV7PKMAaM2UsfqaCYBXgCmjYdMB3WmsmAIk55Eyavx61bL33kfoJXzL85iInpiM0HJ854toMJuayaLfTpDzkHBrCdUHZKIx2pMyQUkMxICTmyZ7GvF8suOrWk-mssm3DIge4NIWLptcFODSKPcXJ3MMiDMtXusT-7ww/s613/Setani--2022.PNG" />
+
+
+            </Grid>
+        </ScrollView>
+
+        <Image Grid.ColumnSpan="3" Grid.Row="3" Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLtGB7pGReqJyLqeV4bkr4qkl1F0kUDhe-4A" />
+
+
+        <Label  Grid.ColumnSpan="3" Grid.Row="6" Text="CREADOR: KLEIBERT MEDINA" FontSize="12" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  />
+
+    </Grid>
+</ContentPage>
