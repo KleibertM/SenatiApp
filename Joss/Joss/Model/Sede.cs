@@ -5,9 +5,9 @@ using Joss.Data;
 
 namespace Joss.Model
 {
-    public class Cliente
+    public class Sede
     {
-        public long? ClienteId { get; set; }
+        public long? SedeId { get; set; }
         public string CodigoPostal { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }

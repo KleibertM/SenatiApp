@@ -9,7 +9,7 @@
             <Frame BackgroundColor="LightBlue">
                 <Label Text="Sedes en Lima" TextColor="Black" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" />
             </Frame>
-            <ListView x:Name="IvClientes" BackgroundColor="White" HasUnevenRows="True" SeparatorColor="RoyalBlue" ItemSelected="IvClientes_ItemSelected">
+            <ListView x:Name="IvSede" BackgroundColor="White" HasUnevenRows="True" SeparatorColor="RoyalBlue" ItemSelected="IvSede_ItemSelected">
                 <ListView.ItemTemplate BackgroundColor="red">
                     <DataTemplate>
                         <ViewCell>

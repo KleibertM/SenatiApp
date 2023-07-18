@@ -18,13 +18,13 @@ namespace Joss
         public Sedes()
         {
             InitializeComponent();
-            IvClientes.ItemsSource = ClienteServicio.GetClientes();
+            IvSede.ItemsSource = SedeServicio.GetSede();
         }
-        private async void IvClientes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void IvSede_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             try
             {
-                var cliente = e.SelectedItem as Cliente;
+                var cliente = e.SelectedItem as Sede;
                 if (cliente.Nombre != null && cliente.Direccion != null && cliente.CodigoPostal != null)
                 {
                     await MapaDireccion(cliente);
@@ -39,7 +39,7 @@ namespace Joss
                 await DisplayAlert("Error : ", ex.Message, "OK");
             }
         }
-        private async Task MapaDireccion(Cliente cli)
+        private async Task MapaDireccion(Sede cli)
         {
             string pais = "BR";
             string CodigoPais = "55";
